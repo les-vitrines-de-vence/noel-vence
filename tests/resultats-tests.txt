@@ -1,0 +1,28 @@
+✔ Journée réelle programmée du 17 octobre (25.348922ms)
+✔ Journée réelle programmée du 18 octobre (0.554924ms)
+✔ Journée réelle programmée du 19 octobre (0.370807ms)
+✔ Journée réelle programmée du 20 octobre (0.45285ms)
+✔ Journée réelle programmée du 21 octobre (0.388203ms)
+✔ Avant et après la période (3.155318ms)
+✔ Début exact le 17 à minuit à Paris (1.33247ms)
+✔ Fin exacte le 21 à minuit à Paris (1.752351ms)
+✔ Passages à minuit des cinq journées (2.32477ms)
+✔ 100 scans ne font jamais avancer la journée (95.35665ms)
+✔ Date client et cookies ignorés (0.662044ms)
+✔ Bernard uniquement le mardi (1.140733ms)
+✔ Aucun code des autres journées dans la réponse publique (0.852891ms)
+✔ En-têtes sans cache et accès GitHub Pages (1.284038ms)
+✔ Requête CORS de préparation (0.165799ms)
+✔ Chemin inconnu et écriture refusée (0.295093ms)
+✔ Calendrier absent ou invalide masque les offres (0.562745ms)
+✔ Champs requis, dates et doublons validés (0.523045ms)
+✔ Le champ interne non autorisé ne sort pas du serveur (0.329355ms)
+✔ Heure d’été et heure d’hiver (0.688063ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 403.275244

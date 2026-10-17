@@ -1,0 +1,42 @@
+/* Habillage de Noël uniquement. Les règles du calendrier sont inchangées. */
+:root{--green:#173f35;--cream:#fbf6ec;--ink:#283b31;--gold:#967033;--red:#8e2832}
+body{background-color:var(--cream);background-image:radial-gradient(#bb93461a .7px,transparent .7px);background-size:10px 10px}
+header{border-bottom:0;padding-top:27px;padding-bottom:27px}
+.edition{color:var(--red);font-weight:700;border:1px solid #b9944a66;padding:9px 14px;border-radius:3px}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#285649 0%,#173f35 55%,#10362e 100%);color:#fff7e5;padding:64px 40px 35px;border-radius:12px 12px 0 0;box-shadow:0 18px 45px #183b3012;border:1px solid #b9935244}
+.hero:before{content:'';position:absolute;inset:13px;border:1px solid #d5b57050;border-radius:5px;pointer-events:none;z-index:-1}
+.hero:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;background-image:radial-gradient(circle at 8% 29%,#e7d4a6 0 1px,transparent 1.8px),radial-gradient(circle at 18% 65%,#e7d4a6 0 1px,transparent 1.8px),radial-gradient(circle at 88% 70%,#e7d4a6 0 1px,transparent 1.8px),radial-gradient(circle at 80% 22%,#e7d4a6 0 1px,transparent 1.8px),radial-gradient(circle at 64% 83%,#e7d4a6 0 1px,transparent 1.8px);background-size:220px 220px;opacity:.5}
+.hero .eyebrow{color:#ddc48c;letter-spacing:2.7px;font-size:9px;margin-bottom:23px}
+.christmas-kicker{font-family:Georgia,serif;font-style:italic;font-size:19px;color:#dec18b;margin:0 0 17px}
+.hero h1{font-size:clamp(43px,5.6vw,69px);line-height:1.12;position:relative;max-width:800px;margin-bottom:20px;color:#fff9ed;text-wrap:balance}
+.hero h1 em{color:#e5c386;display:inline-block}
+.hero .intro{color:#e2e9db;font-size:15px;line-height:1.9;position:relative}
+.period{background:var(--red);border:1px solid #c89065;color:#fff4dc;padding:14px 23px;border-radius:3px;box-shadow:0 5px 17px #071f2544;margin-top:13px}
+.hero-signature{font-family:Georgia,serif;font-size:13px;font-style:italic;color:#d8cda9;letter-spacing:.3px;margin:27px 0 0}
+.christmas-decor{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+.bauble{position:absolute;top:-20px;border-radius:50%;box-shadow:inset -10px -8px 18px #0004,0 6px 18px #09292055;transform-origin:50% -80px}
+.bauble:before{content:'';position:absolute;width:1px;height:120px;background:#d5ba7b;bottom:100%;left:50%}
+.bauble:after{content:'';position:absolute;height:8px;width:15px;left:calc(50% - 7.5px);top:-7px;background:linear-gradient(90deg,#a78a4e,#f3d693,#ae8a48);border-radius:2px}
+.bauble-one{width:67px;height:67px;left:5%;top:69px;background:radial-gradient(circle at 30% 25%,#c87771,#a12e3c 45%,#611b28);animation:sway 8s ease-in-out infinite}
+.bauble-two{width:40px;height:40px;left:13%;top:12px;background:repeating-linear-gradient(80deg,#d8b26b 0 4px,#eacb8c 4px 6px);animation:sway 7s ease-in-out infinite reverse}
+.bauble-three{width:70px;height:70px;right:5%;top:49px;background:radial-gradient(circle at 30% 25%,#f7dfaa,#be9550 55%,#88652e);animation:sway 9s ease-in-out infinite reverse}
+.bauble-four{width:38px;height:38px;right:14%;top:4px;background:radial-gradient(circle at 30% 25%,#c97771,#922b37 60%,#611b28)}
+.gold-star{position:absolute;color:#dfbf79;font-family:Georgia,serif;line-height:1}
+.star-one{left:8%;top:245px;font-size:34px}.star-two{right:10%;top:250px;font-size:40px}.star-three{left:23%;bottom:60px;font-size:19px}.star-four{right:25%;bottom:72px;font-size:25px}
+.pine{position:absolute;bottom:-58px;width:130px;height:270px;background:repeating-linear-gradient(27deg,transparent 0 11px,#779672aa 12px 14px,transparent 15px 23px),repeating-linear-gradient(-27deg,transparent 0 11px,#77967299 12px 14px,transparent 15px 23px);clip-path:polygon(50% 0,68% 30%,60% 30%,83% 60%,70% 58%,100% 100%,0 100%,30% 58%,17% 60%,40% 30%,32% 30%);opacity:.55}
+.pine-left{left:-25px;transform:rotate(-24deg)}.pine-right{right:-25px;transform:rotate(24deg)}
+.daily{position:relative;padding:32px;margin-top:0;border:1px solid #dcccab;border-top:5px solid var(--red);background:#fffcf5;border-radius:0 0 12px 12px;box-shadow:0 18px 45px #183b3008}
+.day-heading .eyebrow{color:var(--red)}
+.empty{background:linear-gradient(110deg,#f5eddb,#faf4e7);border:1px solid #e5d4af;border-radius:7px;min-height:215px;padding:32px 36px}
+.empty-number{color:var(--red);opacity:.9;font-size:90px;border:1px solid #c5a363;border-radius:60px 60px 6px 6px;min-width:112px;text-align:center;padding:23px 12px;box-shadow:inset 0 0 0 5px #f5eddb,inset 0 0 0 6px #d8bc83}
+.empty h3{font-size:30px;color:var(--red)}
+.trial-note{border-top-color:#dbc9a5}
+.offers article{border-color:#dccaab;border-top:4px solid var(--red);border-radius:6px;background:#fffcf6;position:relative}
+.offer-index{color:#a67b39}.badge{color:var(--red)}.discount{color:var(--red)}.coupon{border-color:#caa866;background:#f8f0df;padding:18px 12px;margin-top:20px;border-radius:3px}.coupon button{background:var(--red);border-color:var(--red)}
+.how{padding-top:51px;padding-bottom:54px}.how h2{color:var(--green)}.how>div>span{color:var(--red)}.how h3{font-weight:600}.how-title .eyebrow{color:var(--red)}
+footer{position:relative;border-top:3px solid #c49b53;background:linear-gradient(110deg,#14372f,#204c3d);padding-top:39px;padding-bottom:39px}
+footer:before{content:'✦';display:block;color:#dec187;font-size:20px;margin-bottom:12px}footer>span{color:#f4dfb7}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@media(prefers-reduced-motion:reduce){.bauble{animation:none}}
+@media(max-width:700px){header{padding:21px 19px}.edition{font-size:8px;padding:7px 9px}.brand{font-size:17px}main{padding:0 14px}.hero{padding:65px 21px 30px;border-radius:9px 9px 0 0}.hero:before{inset:9px}.hero .eyebrow{font-size:8px;letter-spacing:1.5px;max-width:240px;line-height:1.8;margin:0 auto 20px}.christmas-kicker{font-size:16px}.hero h1{font-size:43px;letter-spacing:-1.3px}.hero .intro{font-size:12px;line-height:1.9}.hero-signature{font-size:11px;max-width:240px;margin:25px auto 0;line-height:1.8}.period{font-size:8px;padding:12px 15px;letter-spacing:1px}.bauble-one{width:36px;height:36px;left:5%;top:15px}.bauble-two{width:22px;height:22px;left:16%;top:-9px}.bauble-three{width:38px;height:38px;right:5%;top:13px}.bauble-four{width:23px;height:23px;right:17%;top:-8px}.star-one{left:6%;top:210px;font-size:15px}.star-two{right:5%;top:245px;font-size:18px}.star-three{left:12%;bottom:65px;font-size:12px}.star-four{right:12%;bottom:66px;font-size:13px}.pine{width:84px;height:190px;bottom:-35px}.pine-left{left:-40px}.pine-right{right:-40px}.daily{padding:25px 16px;border-top-width:4px}.day-heading{gap:8px}.day-heading h2{font-size:21px}.day-heading .eyebrow{font-size:7px;letter-spacing:1.2px}.status{font-size:8px}.empty{padding:25px 20px;min-height:235px}.empty h3{font-size:28px}.empty p:not(.eyebrow){font-size:13px}.empty .eyebrow{font-size:8px}.how{padding:37px 12px 41px}.notice{padding:15px;font-size:11px}.offers article{padding:20px}.coupon strong{font-size:19px}.coupon span{font-size:7px}}
+@media(max-width:365px){.hero h1{font-size:36px}.hero .intro br{display:none}.day-heading{flex-direction:column}.status{margin-top:0}.edition{letter-spacing:.5px}.brand{font-size:16px}}
