@@ -18,7 +18,15 @@
   const how=()=>`<main class="poster-screen poster-explications"><img src="./visuels/mode-emploi-qr.jpg" alt="Scannez le même QR chaque jour. Découvrez les offres du jour. Présentez le code en boutique. Chaque offre est valable uniquement à la date indiquée."><nav class="poster-bottom-nav" aria-label="Navigation"><button data-action="offres">← Retour aux offres</button><button data-action="accueil">Accueil</button></nav></main>`;
   const christmas=()=>`<main class="poster-screen poster-christmas"><img src="./visuels/noel-25-decembre.jpg" alt="Joyeux Noël à vous ! Les commerçants de Vence vous souhaitent une merveilleuse journée. Merci de faire vivre nos commerces."></main>`;
   const attribution=()=>`<footer class="attribution"><p>Cette application a été conçue et réalisée par</p><strong>Papeterie Multi-Services</strong><address>11, avenue Marcellin Maurel – Vence</address></footer>`;
-  function card(o,i){return `<article class="commerce-card motif-${i%3}"><span class="deco-image" aria-hidden="true"></span><div class="commerce-body"><h2>${escape(o.name)}</h2>${(o.address||window.VITRINES_ADRESSES?.[o.name])?`<address class="store-address">${escape(o.address||window.VITRINES_ADRESSES[o.name])}</address>`:''}<span class="ornamental-line" aria-hidden="true">✦</span><p class="discount">${escape(o.offer)}</p><p class="conditions">${escape(o.conditions)}</p><p class="validite">Valable uniquement le ${escape(dateLabel(o.date))}</p><div class="offer-code"><code>${escape(o.code)}</code><button type="button" data-copy="${escape(o.id)}" aria-label="Copier le code de ${escape(o.name)}">${state.copied===o.id?'Copié !':'▣ Copier'}</button></div>${state.copied==='error-'+o.id?'<p class="copy-failure" role="status">Copie indisponible. Sélectionnez le code.</p>':''}</div></article>`;}
+  function card(o,i){
+    // Renseignements commerciaux propres à l'annonce, sans altérer le calendrier.
+    const magasin=window.VITRINES_COMMERCES?.[o.code]||{};
+    const nom=magasin.nom||o.name;
+    const adresse=magasin.adresse||o.address||window.VITRINES_ADRESSES?.[o.name];
+    const telephone=magasin.telephone;
+    const lienTel=telephone?String(telephone).replace(/[^0-9+]/g,'').replace(/^0/, '+33'):'';
+    return `<article class="commerce-card motif-${i%3}"><span class="deco-image" aria-hidden="true"></span><div class="commerce-body"><h2>${escape(nom)}</h2>${adresse?`<address class="store-address">${escape(adresse)}${telephone?`<br><a href="tel:${escape(lienTel)}" style="color:inherit;text-decoration:none">${escape(telephone)}</a>`:''}</address>`:''}<span class="ornamental-line" aria-hidden="true">✦</span><p class="discount">${escape(o.offer)}</p><p class="conditions">${escape(o.conditions)}</p><p class="validite">Valable uniquement le ${escape(dateLabel(o.date))}</p><div class="offer-code"><code>${escape(o.code)}</code><button type="button" data-copy="${escape(o.id)}" aria-label="Copier le code de ${escape(nom)}">${state.copied===o.id?'Copié !':'▣ Copier'}</button></div>${state.copied==='error-'+o.id?'<p class="copy-failure" role="status">Copie indisponible. Sélectionnez le code.</p>':''}</div></article>`;
+  }
   function offers(){
     const d=state.data;
     let content;
