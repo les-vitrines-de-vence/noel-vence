@@ -26,11 +26,12 @@ button:focus-visible{outline:3px solid #edc978;outline-offset:3px}
 .commerce-offres{display:flex;flex-direction:column;gap:20px}
 .commerce-card{position:relative;min-height:250px;background:linear-gradient(110deg,#fff6e8 0%,#fffaf0 48%,#faedd9 100%);color:#0b2e25;border:2px solid #e6b15b;border-radius:25px;box-shadow:0 0 0 3px #7c4e17,0 10px 16px #0006;overflow:hidden;isolation:isolate}
 /* Ces trois motifs sont prélevés exactement sur le visuel de référence de l'utilisateur. */
-.deco-image{position:absolute;z-index:-1;left:0;top:53px;width:220px;height:160px;background-image:url('./visuels/reference-offres.jpg');background-size:1024px 1536px;background-repeat:no-repeat;background-position:-75px -280px;-webkit-mask-image:linear-gradient(90deg,#000 0 63%,transparent 98%);mask-image:linear-gradient(90deg,#000 0 63%,transparent 98%);pointer-events:none}
-.motif-1 .deco-image{background-position:-67px -620px;top:46px}
-.motif-2 .deco-image{background-position:-65px -936px;top:33px}
-.commerce-body{padding:13px 22px 12px;position:relative;text-align:center}
-.commerce-body h2{font:700 clamp(23px,3.6vw,37px)/1.08 Georgia,serif;margin:0 0 5px;overflow-wrap:anywhere;text-wrap:balance}
+/* Décors véritablement détourés, sans rectangle ni morceau coupé. */
+.deco-image{position:absolute;z-index:0;left:6px;top:10px;width:180px;height:140px;background:url('./visuels/decor-cadeau.png') left top/contain no-repeat;opacity:.96;pointer-events:none}
+.motif-1 .deco-image{background-image:url('./visuels/decor-boule-rouge.png');top:10px}
+.motif-2 .deco-image{background-image:url('./visuels/decor-boule-doree.png');top:10px}
+.commerce-body{padding:13px 22px 12px;position:relative;z-index:1;text-align:center}
+.commerce-body h2{font:700 clamp(23px,3.6vw,37px)/1.08 Georgia,serif;margin:0 0 5px;padding:0 35px 0 145px;min-height:64px;overflow-wrap:anywhere;text-wrap:balance}
 .store-address{color:#376049;font:normal 14px/1.35 Arial,sans-serif;margin:0 auto 5px}
 .ornamental-line{display:block;color:#ca943d;letter-spacing:12px;font-size:18px;line-height:1.1;margin-bottom:3px}
 .discount{font:700 clamp(29px,4.6vw,48px)/1.08 Georgia,serif;color:#850c21;margin:2px auto 5px;max-width:650px;text-wrap:balance}
@@ -48,17 +49,17 @@ button:focus-visible{outline:3px solid #edc978;outline-offset:3px}
 .offers-actions button{font:normal clamp(17px,2.8vw,24px) Georgia,serif}.offers-actions span{font-size:28px;vertical-align:middle}
 .waiting{background:#fff6df;border:3px solid #e6bf73;border-radius:18px;padding:32px 22px;color:#244239;text-align:center;font-size:19px;line-height:1.5}
 .waiting h2{font:normal 30px Georgia,serif;color:#7e1024;margin:0 0 10px}.waiting p{margin:0 0 12px}.waiting button{border:0;border-radius:8px;background:#8d1128;color:#fff;padding:12px 20px}
-@media(max-width:600px){.offres-navigation{padding:8px 8%}.offres-content{padding:3px 8% 28px}.commerce-offres{gap:17px}.commerce-card{border-radius:18px;min-height:245px}.commerce-body{padding:13px 10px 12px}.commerce-body h2{font-size:clamp(23px,5.2vw,30px)}.discount{font-size:clamp(28px,6.4vw,36px);margin-top:8px}.conditions{font-size:13px;margin-top:10px}.deco-image{left:-20px;top:80px;transform:scale(.57);transform-origin:left top}.motif-1 .deco-image{top:58px}.motif-2 .deco-image{top:58px}.validite{font-size:12px;padding:8px 5px}.offer-code{gap:8px}.offer-code code{font-size:clamp(15px,3.8vw,20px);padding:10px 4px}.offer-code button{font-size:15px;min-width:88px;padding:8px 9px}.offres-title h1{font-size:clamp(32px,8.2vw,45px)}.offres-date{font-size:17px}.trial-banner{font-size:10px;letter-spacing:.3px;padding:10px 7px}.attribution strong{font-size:clamp(24px,6vw,30px)}}
+@media(max-width:600px){.offres-navigation{padding:8px 8%}.offres-content{padding:3px 8% 28px}.commerce-offres{gap:17px}.commerce-card{border-radius:18px;min-height:245px}.commerce-body{padding:13px 10px 12px}.commerce-body h2{font-size:clamp(23px,5.2vw,30px)}.discount{font-size:clamp(28px,6.4vw,36px);margin-top:8px}.conditions{font-size:13px;margin-top:10px}.deco-image{left:-20px;top:80px;transform:scale(.57);transform-origin:left top}.motif-1 .deco-image{top:58px}.motif-2 .deco-image{top:58px}.validite{font-size:12px;padding:8px 5px}.offer-code{gap:8px}.offer-code code{font-size:clamp(15px,3.8vw,20px);padding:10px 4px}.offer-code button{font-size:15px;min-width:88px;padding:8px 9px}.offres-title h1{font-size:clamp(32px,8.2vw,45px)}.offres-date{font-size:17px}.trial-banner{font-size:10px;letter-spacing:.3px;padding:10px 7px}.attribution strong{font-size:clamp(20px,5.8vw,26px);white-space:nowrap;letter-spacing:-.4px}}
 @media(min-width:700px){.offres-page::before{background-size:100% 100%}.commerce-card{min-height:266px}.commerce-body{padding-left:42px;padding-right:42px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-/* Adaptation mobile : boules et cadeaux visibles, mais à l'écart du texte. */
+/* Correction iPhone : une seule image d'accueil, sans fond dupliqué en bandes. */
+.poster-accueil,.poster-explications,.poster-christmas{background-image:none!important;background-color:#062a20!important}
+.poster-accueil .poster-relative{box-shadow:none}
+.poster-screen img{max-width:100%;height:auto}
+/* Le décor se place entièrement dans le coin, sans couper le texte. */
 @media(max-width:600px){
- .deco-image,.motif-1 .deco-image,.motif-2 .deco-image{left:4px;top:1px;transform:scale(.38);transform-origin:left top;opacity:.95}
- .commerce-body h2{padding:0 0 0 62px;min-height:50px;font-size:clamp(21px,5.3vw,26px)}
+ .deco-image,.motif-1 .deco-image,.motif-2 .deco-image{left:4px;top:9px;width:112px;height:110px;transform:none;opacity:.98}
+ .commerce-body h2{padding:0 4px 0 86px;min-height:65px;font-size:clamp(21px,5.3vw,27px);line-height:1.1}
  .commerce-body .ornamental-line{margin-top:1px}
  .commerce-body .discount{position:relative;z-index:1}
- .poster-accueil{background-image:linear-gradient(#062a206e,#062a206e),url('./visuels/accueil-noel.jpg');background-size:cover;background-position:center}
- .poster-accueil .poster-relative{box-shadow:0 0 40px #0009}
- .poster-explications{background-image:linear-gradient(#062a206e,#062a206e),url('./visuels/mode-emploi-qr.jpg');background-size:cover;background-position:center}
- .poster-christmas{background-image:linear-gradient(#062a206e,#062a206e),url('./visuels/noel-25-decembre.jpg');background-size:cover;background-position:center}
 }
